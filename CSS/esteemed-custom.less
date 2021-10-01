@@ -1,82 +1,88 @@
 /** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-*** │ FILENAME: esteemed-custom.less                                                               │
-*** │                                                                                              │
-*** │ SUMMARY: Style rules for presenting content on the website of WSU's ESTEEMED MIRA program,   │
-*** │   which is managed by the Division of Academic Engagement and Student Achievement (DAESA).   │
-*** │   The ESTEEMED MIRA website is built using using the builder template of  the Spine parent   │
-*** │   theme of WSUWP, and style rulesets built from the code here are designed to accompany or   │
-*** │   supersede styling associated with the theme.                                               │
-*** │                                                                                              │
-*** │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
-*** └──────────────────────────────────────────────────────────────────────────────────────────────┘
-***  TABLE OF CONTENTS:
-***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Build entry point from DAESA's CSS development project...............................34
-***  §2: Persistent section header comment for unit specific styling..........................46
-***  §3: Styling at body & page level.........................................................78
-***  §4: Styling at the section level........................................................115
-***    >>> §4.1: Headers.....................................................................119
-***      →→→ §4.1.1: Main header.............................................................123
-***      →→→ §4.1.2: H1 Header Sections......................................................199
-***    >>> §4.2: Headings....................................................................218
-***    >>> §4.3: Asides......................................................................234
-***  §5: Styling included via Less mixins....................................................311
-***  §6: Site-specific semantic CSS styling..................................................340
-***  §7: Global DAESA footer.................................................................358
-***  §8: Styling of specific components......................................................457
-***    >>> §8.1: Coming up feed..............................................................461
-***    >>> §8.2: DAESA focus features........................................................485
-***    >>> §8.3: DAESA focus features........................................................507
-***  ───────────────────────────────────────────────────────────────────────────────────────────────
-**/
+ *    █▀▀▀ ▄▀▀▀▐▀█▀▌█▀▀▀ █▀▀▀ ▐▀▄▀▌█▀▀▀ █▀▀▄    ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌  █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *    █▀▀  ▀▀▀█  █  █▀▀  █▀▀  █ ▀ ▌█▀▀  █  █ ▀▀ █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌  █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *    ▀▀▀▀ ▀▀▀   █  ▀▀▀▀ ▀▀▀▀ █   ▀▀▀▀▀ ▀▀▀      ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ *
+ *    See persistent section header comment below (§2) for additional information and license.
+ *  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Build entry point from DAESA's CSS development project...............................30
+ *   §2: Persistent section header comment for unit specific styling..........................43
+ *   §3: Styling at body & page level.........................................................84
+ *   §4: Styling at the section level........................................................121
+ *     >>> §4.1: Headers.....................................................................125
+ *       →→→ §4.1.1: Main header.............................................................129
+ *       →→→ §4.1.2: H1 Header Sections......................................................205
+ *     >>> §4.2: Headings....................................................................224
+ *     >>> §4.3: Asides......................................................................235
+ *   §5: Styling included via Less mixins....................................................312
+ *   §6: Site-specific semantic CSS styling..................................................326
+ *   §7: Global DAESA footer.................................................................344
+ *   §8: Styling of specific components......................................................443
+ *     >>> §8.1: Coming up feed..............................................................447
+ *     >>> §8.2: DAESA focus features........................................................471
+ *     >>> §8.3: DAESA focus features........................................................493
+ *   ───────────────────────────────────────────────────────────────────────────────────────────────
+ */
 
 /** ================================================================================================
-*** §1: Build entry point from DAESA's CSS development project
-**/
+ *  §1: Build entry point from DAESA's CSS development project
+ */
 
 @grid-behavior: "hybrid";
 @oue-rules-wrapper: ~"";
-@import "..\WSU-UE---CSS\variables.less";
+@import "..\WSU-DAESA-CSS\Settings\build-settings.less";
 @use-design__content-boxes: true;
 @use-design__daesa-footers: true;
 @use-design__gf-progress-indicators: true;
-@import "..\WSU-UE---CSS\css-build-entry-point.less";
+@use-design__daesa-grids: true;
+@import "..\WSU-DAESA-CSS\build-entry-point.less";
 
 /** ================================================================================================
-*** §2: Persistent section header comment for unit specific styling
-**/
+ *  §2: Persistent section header comment for unit specific styling
+ */
 
 /*! ================================================================================================
-*** ESTEEMED MIRA Website Styling Section
-*** ================================================================================================
-*** SUMMARY: CSS code designed for use on Washington State University's [ESTEEMED MIRA PROGRAM]
-***   (https://provost.wsu.edu/daesa/esteeemed/) that was built from precompiled CSS written in the
-***   Less language extension of CSS.
-***
-*** DESCRIPTION: Fully documented, precompiled source code from which this section of the custom
-***   stylesheet was built is developed and maintained on the following GitHub project:
-***   https://github.com/invokeImmediately/provost.wsu.edu_daesa_esteemed/
-***
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-***
-*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
-***
-***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***   without fee is hereby granted, provided that the above copyright notice and this permission
-***   notice appear in all copies.
-***
-***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
-***   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
-***   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
-***   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-***   PERFORMANCE OF THIS SOFTWARE.
-*** ================================================================================================
-**/
+ *  █▀▀▀ ▄▀▀▀▐▀█▀▌█▀▀▀ █▀▀▀ ▐▀▄▀▌█▀▀▀ █▀▀▄   ▐▀▄▀▌▀█▀ █▀▀▄ ▄▀▀▄  ▐   ▌█▀▀▀ █▀▀▄ ▄▀▀▀ ▀█▀▐▀█▀▌█▀▀▀
+ *  █▀▀  ▀▀▀█  █  █▀▀  █▀▀  █ ▀ ▌█▀▀  █  █   █ ▀ ▌ █  █▄▄▀ █▄▄█  ▐ █ ▌█▀▀  █▀▀▄ ▀▀▀█  █   █  █▀▀
+ *  ▀▀▀▀ ▀▀▀   █  ▀▀▀▀ ▀▀▀▀ █   ▀▀▀▀▀ ▀▀▀    █   ▀▀▀▀ ▀  ▀▄█  ▀   ▀ ▀ ▀▀▀▀ ▀▀▀  ▀▀▀  ▀▀▀  █  ▀▀▀▀
+ *
+ *     ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀   ▄▀▀▀ █▀▀▀ ▄▀▀▀▐▀█▀▌▀█▀ ▄▀▀▄ ▐▀▀▄
+ *     ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄   ▀▀▀█ █▀▀  █     █   █  █  █ █  ▐
+ *     ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀   ▀▀▀  ▀▀▀▀  ▀▀▀  █  ▀▀▀  ▀▀  ▀  ▐
+ *  ================================================================================================
+ *  CSS code designed for use on Washington State University's [ESTEEMED MIRA PROGRAM](https://provo
+ *    st.wsu.edu/daesa/esteeemed/) that was built from precompiled CSS written in the Less language
+ *    extension of CSS.
+ * 
+ *  Fully documented, precompiled source code from which this section of the custom stylesheet was
+ *    built is developed and maintained on the linked GitHub project.
+ * 
+ *  @version 1.0.0
+ * 
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @link https://github.com/invokeImmediately/mira.wsu.edu/
+ *  @license MIT — Copyright (c) 2021 Washington State University.
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the “Software”), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *      DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ================================================================================================
+ */
 
 /** ================================================================================================
-*** §3: Styling at body & page level
-**/
+ *  §3: Styling at body & page level
+ */
 
 @esteemed-site-bgs-rs: {
 	#jacket {
@@ -112,16 +118,16 @@
 @esteemed-site-bgs-rs();
 
 /** ================================================================================================
-*** §4: Styling at the section level
-**/
+ *  §4: Styling at the section level
+ */
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §4.1: Headers
-**/
+ *    >>> §4.1: Headers
+ */
 
 /**     ····························································································
-***     →→→ §4.1.1: Main header
-**/
+ *      →→→ §4.1.1: Main header
+ */
 
 @esteemed-main-header-rs: {
 	.main-header {
@@ -196,8 +202,8 @@
 @esteemed-main-header-rs();
 
 /**     ····························································································
-***     →→→ §4.1.2: H1 Header Sections
-**/
+ *      →→→ §4.1.2: H1 Header Sections
+ */
 
 .use-sectional-article-headers();
 
@@ -215,24 +221,19 @@
 // }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §4.2: Headings
-**/
+ *    >>> §4.2: Headings
+ */
 
 @esteemed-headings-rs: {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
+	h1 {
 		.tt--uppercase;
 	}
 };
 @esteemed-headings-rs();
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §4.3: Asides
-**/
+ *    >>> §4.3: Asides
+ */
 
 // TODO: Remove?
 
@@ -308,8 +309,8 @@
 }
 
 /** ================================================================================================
-*** §5: Styling included via Less mixins
-**/
+ *  §5: Styling included via Less mixins
+ */
 
 .use-glass-button-layout();
 
@@ -317,28 +318,13 @@
 
 .use-paragraph-notices(url(/wp-content/uploads/sites/51/2017/05/icon_genericons-neue_notice_v5.png));
 
-// .add-new-notice-class(
-// 	donor-thank-you,
-// 	@hex-bright-gray,
-// 	@hex-dark-gray,
-// 	@hex-crimson,
-// 	url(/wp-content/uploads/sites/51/2018/08/icon_wsu-foundation-give_with-calligraphy-swirl_88x117.png),
-// 	100px,
-// 	88px,
-// 	"centered"
-// );
-
 .use-tool-tip-indicator-icon(url(/wp-content/uploads/sites/51/2017/10/icon_indicator_tool-tip-info_24x24.png));
 
-// @pseudo-footer-bg: { background: @hex-white url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAiAAEDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAWAQEBAQAAAAAAAAAAAAAAAAAABgj/2gAMAwEAAhADEAAAAYTk92AAf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hP//aAAwDAQACAAMAAAAQAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/ED//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/ED//2Q==')
-//  left bottom repeat-x; };
-// .use-main-pseudo-footer(@pseudo-footer-bg, 34px);
 .use-sectional-article-headers();
-// .use-short-main-header-on-pages();
 
 /** ================================================================================================
-*** §6: Site-specific semantic CSS styling
-**/
+ *  §6: Site-specific semantic CSS styling
+ */
 
 .wsuwp-content-syndicate-wrapper {
 	.content-item-byline-author {
@@ -355,8 +341,8 @@
 }
 
 /** ================================================================================================
-*** §7: Global DAESA bar & footer
-**/
+ *  §7: Global DAESA bar & footer
+ */
 
 @daesa-global-footer-rs: {
 	.globalbar {
@@ -454,12 +440,12 @@
 @daesa-global-footer-rs();
 
 /** ================================================================================================
-*** §8: Styling of specific components
-**/
+ *  §8: Styling of specific components
+ */
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §8.1: Coming up feed
-**/
+ *    >>> §8.1: Coming up feed
+ */
 
 #coming-up-feed {
 	.content-item-event-date {
@@ -482,8 +468,8 @@
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §8.2: DAESA focus features
-**/
+ *    >>> §8.2: DAESA focus features
+ */
 
 @daesa-focus-feature-rs: {
 	#daesa-focus-feature {
@@ -504,8 +490,8 @@
 @daesa-focus-feature-rs();
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §8.3: DAESA focus features
-**/
+ *    >>> §8.3: DAESA focus features
+ */
 
 @rs-esteemed-mira-training-faculty-table: {
 	@profile_h: 108px;
