@@ -1,0 +1,281 @@
+/*!*************************************************************************************************
+ * ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀ ▄
+ * █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄ ▄
+ *  ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
+ *
+ *    ▐▀▄▀▌▀█▀ █▀▀▄ ▄▀▀▄   █▀▀▄ █▀▀▄ ▄▀▀▄ █▀▀▀ █▀▀▄ ▄▀▀▄ ▐▀▄▀▌
+ *    █ ▀ ▌ █  █▄▄▀ █▄▄█   █▄▄▀ █▄▄▀ █  █ █ ▀▄ █▄▄▀ █▄▄█ █ ▀ ▌
+ *    █   ▀▀▀▀ ▀  ▀▄█  ▀   █    ▀  ▀▄ ▀▀  ▀▀▀▀ ▀  ▀▄█  ▀ █   ▀
+ * -------------------------------------------------------------------------------------------------
+ * The following section of this stylesheet contains CSS code written for use on the MIRA Program
+ *   website to further customize the layout and presentation of certain WDS elements, components,
+ *   modules, and assemblies. This stylesheet is designed, built, and maintained by the Division of
+ *   Academic Engagement and Student Achievement (DAESA) in the Office of the Provost at Washington
+ *   State University (WSU).
+ *
+ * Some of the CSS code in the following section was generated from precompiled CSS written in the
+ *   Less language extension of CSS, and some of it was written by hand in the WSUWP CSS Stylesheet
+ *   Editor. Regardless, all of the code is designed to be applied via the WSUWP CSS Stylesheet
+ *   Editor functioning in add-on mode. It was written for use with the Web Design System 2.0 theme.
+ *
+ *  Please refer to the linked GitHub project for fully documented, precompiled source code.
+ *
+ *  @version 0.0.0
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS-WDS
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *      DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ================================================================================================
+ */
+/*! —» Enhancement: TablePress Assemblies → MIRA training faculty profiles «— */
+.tf-profile .tf-profile__image {
+  background-color: #eff0f1;
+  background-size: cover;
+  display: block;
+  height: 108px;
+  margin-bottom: .25em;
+  width: 108px;
+}
+
+.tf-profile.tf-profile--suzanne-appleyard-wayman .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/05/Appleyard-Suzanne-04-22-396x223.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--arden-baylink .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/03/Baylink-Arden-600x338-1-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--santanu-bose .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2021/10/Bose-Santanu-2022-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--jim-brozik .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/89/2014/06/DSC_7353-396x264.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--jean-celli .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/05/Celli-Jean-600x338-1.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--michael-cleveland .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2016/08/Michael-Cleveland-compressed.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--min-du .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/3004/2022/05/Min_Du_960x1280-1-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--rita-a-fuchs-lokensgard .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/04/Fuchs-Rita-09b-22-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--hassan-ghasemzadeh .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2019/11/Hassan-Ghasemzadeh-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--alan-g-goodman .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2021/11/Goodman-Alan-09-21-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--thomas-hardin-kawula .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/04/Kawula-Tom-08-21-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--leigh-knodler .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/05/Knodler-Leigh-600x338-1-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--michael-edward-konkel .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2021/12/Konkel-Mike-09-21-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--alla-s-kostyukova .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/734/2019/08/akostyukova-headshot-2019-150w-132x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--david-lin .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/734/2019/08/dlin-headshot-2019-150w-132x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--eric-lofgren .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/06/Lofgren-Eric-07-22-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--ryan-mclaughlin .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/04/McLaughlin-Ryan-Fall-2021-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--anthony-nicola .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/01/Nicola-Anthony-600x338-1-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--anders-omsland .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/03/Omsland-Anders-09-22-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--james-k-pru .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/2541/2022/10/mira-training-faculty_pru-james-690x942-1-e1665689892703-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--ray-quock .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/514/2015/02/raymond_quock.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--steven-roberts .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/02/Roberts-Steven-09-21.JPG-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--dana-shaw .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2021/10/Shaw-Dana-10-21-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--michael-k-skinner .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/1176/2018/10/Michael-Skinner_6196-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--viveka-vadyvaloo .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/07/Vadyvaloo-Viveka-600x338-1-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--anita-vasavada .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/734/2019/08/vasavada-headshot-2019-150w-132x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--gary-wayman .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/05/Wayman-Gary-04-22-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--john-jason-wyrick .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2022/02/Wyrick-John-600x338-1-198x198.jpg);
+  background-position: center;
+}
+
+.tf-profile.tf-profile--ming-xian .tf-profile__image {
+  background-image: url(https://s3.wp.wsu.edu/uploads/sites/89/2014/07/Xian11-198x198.jpg);
+  background-position: center;
+}
+
+/*! —» Enhancement: Gravity Forms Assemblies → Custom progress indicators «— */
+.progress-indicator {
+  align-items: center;
+  border-top: 1px dotted #ccc;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  position: relative;
+}
+
+.progress-indicator::before {
+  color: #5e5e5e;
+  content: "Application Progress:";
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: .3em;
+}
+
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator,body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator {
+  list-style-type: none !important;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 2.3em;
+}
+
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li,body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li {
+  list-style-type: none !important;
+}
+
+.progress-indicator__l-connector,.progress-indicator__r-connector {
+  background-color: #e5e6e8;
+  position: absolute;
+  height: 5px;
+  top: 50%;
+  width: 18px;
+}
+
+.progress-indicator__section-complete .progress-indicator__l-connector,.progress-indicator__section-complete .progress-indicator__r-connector {
+  background-color: #981e32;
+}
+
+.progress-indicator__l-connector {
+  left: 0;
+  transform: translate(-100%,-50%);
+}
+
+.progress-indicator__section-active .progress-indicator__l-connector {
+  background-color: #981e32;
+}
+
+.progress-indicator__r-connector {
+  right: 0;
+  transform: translate(100%,-50%);
+}
+
+.progress-indicator__section {
+  background-color: #e5e6e8;
+  border-radius: .25em;
+  color: #000;
+  padding: .5em 1em;
+  position: relative;
+  text-align: center;
+}
+
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section,body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section {
+  margin-right: 18px;
+  padding: .5em 1em;
+}
+
+.progress-indicator__section-active {
+  background-color: #58111d;
+  color: #fff;
+}
+
+.progress-indicator__section-complete {
+  background-color: #981e32;
+  color: #fff;
+}
+
+@media screen and (max-width:875px) {
+  .progress-indicator {
+    flex-wrap: wrap;
+  }
+}
